@@ -8,7 +8,7 @@ from kitty_genai import ask_gemini
 from sprite_animator import SpriteAnimator
 from PyQt5.QtGui import QPainter, QColor, QIcon, QPixmap
 from PyQt5.QtCore import QThread
-# import os
+import os
 # import pygame
 
 class ChatDialog(QDialog):
@@ -204,17 +204,18 @@ class KittyWindow(QWidget):
         self.label = QLabel(self)
         self.label.setScaledContents(True)
 
+        base_dir = os.path.dirname(os.path.abspath(__file__))
         self.animations = {
-            "idle_left": SpriteAnimator(self.label, "assets_enc/idle_left.png.enc", 32, 32, 4),
-            "idle_right": SpriteAnimator(self.label, "assets_enc/idle_right.png.enc", 32, 32, 4),
-            "walk_left": SpriteAnimator(self.label, "assets_enc/walk_left.png.enc", 32, 32, 16),
-            "walk_right": SpriteAnimator(self.label, "assets_enc/walk_right.png.enc", 32, 32, 16),
-            "dance_left": SpriteAnimator(self.label, "assets_enc/dance_left.png.enc", 32, 32, 8),
-            "dance_right": SpriteAnimator(self.label, "assets_enc/dance_right.png.enc", 32, 32, 8),
-            "sleep_left": SpriteAnimator(self.label, "assets_enc/sleep_left.png.enc", 32, 32, 4),
-            "sleep_right": SpriteAnimator(self.label, "assets_enc/sleep_right.png.enc", 32, 32, 4),
-            "jump_left": SpriteAnimator(self.label, "assets_enc/jump_left.png.enc", 32, 32, 7),
-            "jump_right": SpriteAnimator(self.label, "assets_enc/jump_right.png.enc", 32, 32, 7),
+            "idle_left": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "idle_left.png.enc"), 32, 32, 4),
+            "idle_right": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "idle_right.png.enc"), 32, 32, 4),
+            "walk_left": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "walk_left.png.enc"), 32, 32, 16),
+            "walk_right": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "walk_right.png.enc"), 32, 32, 16),
+            "dance_left": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "dance_left.png.enc"), 32, 32, 8),
+            "dance_right": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "dance_right.png.enc"), 32, 32, 8),
+            "sleep_left": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "sleep_left.png.enc"), 32, 32, 4),
+            "sleep_right": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "sleep_right.png.enc"), 32, 32, 4),
+            "jump_left": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "jump_left.png.enc"), 32, 32, 7),
+            "jump_right": SpriteAnimator(self.label, os.path.join(base_dir, "assets_enc", "jump_right.png.enc"), 32, 32, 7),
         }
 
         self.setFixedSize(64, 64)
@@ -520,7 +521,6 @@ class KittyWindow(QWidget):
                 y = max(kitty_geom.top() - 100, 0)
                 new_key = prompt_for_api_key(exit_on_cancel=False, pos=(x, y))
                 if not new_key:
-                    print("API key dialog closed or cancelled, app continues running.")
                     break
                 # Validate the key by sending a test prompt
                 url = get_gemini_api_url(new_key)
