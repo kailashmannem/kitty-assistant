@@ -68,6 +68,20 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 
 - No need to install Python, pip, or any other tools.
 
+# ⚠️ Security Notice
+This app is unsigned, so Windows might show a "protected your PC" warning. This is expected for apps not published by large vendors.
+
+💡 To verify the safety of the app:
+
+- You can view or audit the full source code here: GitHub Repo
+
+- This installer was built directly from this open-source code using auto-py-to-exe
+
+- Requires internet access only for chatbox as it requires receiving and sending tokens across internet to your Gemini API.
+
+- Also note that the application requires a Gemini API key as of now to function, I personally don't take or use your key. It is saved inside the application files so that it doesn't prompts multiple times for the key and directly pulls the key from the gemini_api_key.txt file.
+
+✅ Click "More Info" → "Run Anyway" to proceed if you trust the app.
 
 # 🧙‍♂️ Future Additions
 - Voice Integration
