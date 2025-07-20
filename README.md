@@ -85,7 +85,7 @@ This app is unsigned, so Windows might show a "protected your PC" warning. This 
 
 ✅ Click "More Info" → "Run Anyway" to proceed if you trust the app.
 
-# 🔐 Security & Trust
+# 🔐 Privacy & Trust
 This project is open-source and fully transparent. A warning from Windows is expected behavior for apps without a code-signing certificate.
 
 ⚠️ Your privacy and safety are important.
