@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.log
+*.egg-info/
+*.spec
+
+# Virtualenv
+env/
+venv/
+ENV/
+.venv/
+
+# PyInstaller
+dist/
+build/
+desktop-ai/
+*.spec
+
+# VSCode or PyCharm settings
+.vscode/
+.idea/
+
+# OS-generated
+.DS_Store
+Thumbs.db
+
+# API keys and secrets
+gemini_api_key.txt
+
+# Installer output
+KittyInstaller.exe
+KittyApp.zip
+
+# Others
+*.bak
+*.tmp
+*.swp
+assets_enc/
