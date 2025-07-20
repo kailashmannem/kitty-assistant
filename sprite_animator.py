@@ -23,11 +23,9 @@ class SpriteAnimator:
     def load_frames(self):
         self.frames = []
         if self.image_path.endswith('.enc'):
-            # Decrypt the image file
-            key_path = os.path.join(os.path.dirname(self.image_path), 'key.key')
-            if not os.path.exists(key_path):
-                # Try parent directory (for assets_enc/key.key)
-                key_path = os.path.join(os.path.dirname(os.path.dirname(self.image_path)), 'key.key')
+            # Always look for the key in assets_enc/key.key relative to this script
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            key_path = os.path.join(base_dir, 'assets_enc', 'key.key')
             with open(key_path, 'rb') as kf:
                 key = kf.read()
             cipher = Fernet(key)
