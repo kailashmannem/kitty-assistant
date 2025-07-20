@@ -44,6 +44,8 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 ## 🧪 Features
 ✅ Single-click to talk with Kitty
 
+✅ Right-click to access the menu where you can update the api key or exit the application.
+
 ✅ Sprite-based animations: idle, walk, jump, sleep, dance
 
 ✅ AI-powered response system (Gemini)
