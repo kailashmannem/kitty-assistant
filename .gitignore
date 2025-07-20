@@ -19,6 +19,7 @@ dist/
 build/
 desktop-ai/
 *.spec
+*.iss
 
 # VSCode or PyCharm settings
 .vscode/
