@@ -15,9 +15,9 @@ ENV/
 .venv/
 
 # PyInstaller
-dist/
-build/
-desktop-ai/
+./dist
+./build
+./desktop-ai
 *.spec
 *.iss
 
@@ -40,4 +40,5 @@ KittyApp.zip
 *.bak
 *.tmp
 *.swp
-assets_enc/
+./assets_enc
+./assets
