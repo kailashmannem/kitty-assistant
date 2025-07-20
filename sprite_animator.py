@@ -1,6 +1,8 @@
 from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QPixmap
 import os
+from cryptography.fernet import Fernet
+from PyQt5.QtCore import QBuffer, QByteArray, QIODevice
 
 class SpriteAnimator:
     def __init__(self, label, image_path, frame_width, frame_height, frame_count, scale=3):
@@ -20,9 +22,27 @@ class SpriteAnimator:
 
     def load_frames(self):
         self.frames = []
-        full_path = os.path.abspath(self.image_path)
-        sprite_sheet = QPixmap(full_path)
-
+        if self.image_path.endswith('.enc'):
+            # Decrypt the image file
+            key_path = os.path.join(os.path.dirname(self.image_path), 'key.key')
+            if not os.path.exists(key_path):
+                # Try parent directory (for assets_enc/key.key)
+                key_path = os.path.join(os.path.dirname(os.path.dirname(self.image_path)), 'key.key')
+            with open(key_path, 'rb') as kf:
+                key = kf.read()
+            cipher = Fernet(key)
+            with open(self.image_path, 'rb') as ef:
+                encrypted_data = ef.read()
+            decrypted_data = cipher.decrypt(encrypted_data)
+            # Load QPixmap from decrypted bytes
+            ba = QByteArray(decrypted_data)
+            buffer = QBuffer(ba)
+            buffer.open(QIODevice.ReadOnly)
+            sprite_sheet = QPixmap()
+            sprite_sheet.loadFromData(ba, 'PNG')
+        else:
+            full_path = os.path.abspath(self.image_path)
+            sprite_sheet = QPixmap(full_path)
         for i in range(self.frame_count):
             frame = sprite_sheet.copy(i * self.frame_width, 0, self.frame_width, self.frame_height)
             frame = frame.scaled(self.frame_width * self.scale,

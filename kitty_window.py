@@ -205,16 +205,16 @@ class KittyWindow(QWidget):
         self.label.setScaledContents(True)
 
         self.animations = {
-            "idle_left": SpriteAnimator(self.label, "assets/idle_left.png", 32, 32, 4),
-            "idle_right": SpriteAnimator(self.label, "assets/idle_right.png", 32, 32, 4),
-            "walk_left": SpriteAnimator(self.label, "assets/walk_left.png", 32, 32, 16),
-            "walk_right": SpriteAnimator(self.label, "assets/walk_right.png", 32, 32, 16),
-            "dance_left": SpriteAnimator(self.label, "assets/dance_left.png", 32, 32, 8),
-            "dance_right": SpriteAnimator(self.label, "assets/dance_right.png", 32, 32, 8),
-            "sleep_left": SpriteAnimator(self.label, "assets/sleep_left.png", 32, 32, 4),
-            "sleep_right": SpriteAnimator(self.label, "assets/sleep_right.png", 32, 32, 4),
-            "jump_left": SpriteAnimator(self.label, "assets/jump_left.png", 32, 32, 7),
-            "jump_right": SpriteAnimator(self.label, "assets/jump_right.png", 32, 32, 7),
+            "idle_left": SpriteAnimator(self.label, "assets_enc/idle_left.png.enc", 32, 32, 4),
+            "idle_right": SpriteAnimator(self.label, "assets_enc/idle_right.png.enc", 32, 32, 4),
+            "walk_left": SpriteAnimator(self.label, "assets_enc/walk_left.png.enc", 32, 32, 16),
+            "walk_right": SpriteAnimator(self.label, "assets_enc/walk_right.png.enc", 32, 32, 16),
+            "dance_left": SpriteAnimator(self.label, "assets_enc/dance_left.png.enc", 32, 32, 8),
+            "dance_right": SpriteAnimator(self.label, "assets_enc/dance_right.png.enc", 32, 32, 8),
+            "sleep_left": SpriteAnimator(self.label, "assets_enc/sleep_left.png.enc", 32, 32, 4),
+            "sleep_right": SpriteAnimator(self.label, "assets_enc/sleep_right.png.enc", 32, 32, 4),
+            "jump_left": SpriteAnimator(self.label, "assets_enc/jump_left.png.enc", 32, 32, 7),
+            "jump_right": SpriteAnimator(self.label, "assets_enc/jump_right.png.enc", 32, 32, 7),
         }
 
         self.setFixedSize(64, 64)
