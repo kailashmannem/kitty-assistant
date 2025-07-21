@@ -42,7 +42,7 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 - pyinstaller – For packaging and distributing as an installer
 
 ## 🧪 Features
-✅ Single-click to talk with Kitty
+✅ Single-click to talk with Kitty.
 
 ✅ Right-click to access the menu where you can update the api key or exit the application.
 
@@ -50,9 +50,9 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 
 ✅ AI-powered response system (Gemini)
 
-✅ Sleep and wake-up behavior based on mouse interaction
+✅ Sleep and wake-up behavior based on mouse interaction.
 
-✅ Portable desktop experience with no setup required
+✅ Portable desktop experience with no setup required.
 
 ## 📦 Installation & Deployment
 - We use PyInstaller to bundle all dependencies into a standalone .exe.
