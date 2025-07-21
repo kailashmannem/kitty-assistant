@@ -54,6 +54,9 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 
 ✅ Portable desktop experience with no setup required.
 
+😸 Kitty tip: “Pssst... you can create more than one of me at a time!” <br>
+Yes, you heard that right — you can run multiple Kitties on your desktop simultaneously. Why settle for one when you can have a whole clowder of pixelated cats keeping you company?
+
 ## 😺Behaviour
 
 What kitty can do?
