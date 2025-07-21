@@ -54,6 +54,15 @@ When idle, Kitty moves around the screen, sleeps, or reacts to mouse movement.
 
 ✅ Portable desktop experience with no setup required.
 
+## 😺Behaviour
+
+What kitty can do?
+
+- Jump if your cursor is above it's position.
+- Sleep if your cursor is inactive for more than 5 secs.
+- Walk towards the centre of screen.
+- Idle or licks it's paw most of the time.
+
 ## 📦 Installation & Deployment
 - We use PyInstaller to bundle all dependencies into a standalone .exe.
 
@@ -81,8 +90,6 @@ This app is unsigned, so Windows might show a "protected your PC" warning. This 
 
 - Requires internet access only for chatbox as it requires receiving and sending tokens across internet to your Gemini API.
 
-- Also note that the application requires a Gemini API key as of now to function, I personally don't take or use your key. It is saved inside the application files so that it doesn't prompts multiple times for the key and directly pulls the key from the gemini_api_key.txt file.
-
 ✅ Click "More Info" → "Run Anyway" to proceed if you trust the app.
 
 # 🔐 Privacy & Trust
@@ -96,6 +103,10 @@ This project is open-source and fully transparent. A warning from Windows is exp
 
 You can always verify the code on this repository and build it yourself.
 We’re exploring digital code signing to enhance trust — updates will follow.
+
+- Also note that the application requires a Gemini API key as of now to function, I personally don't take or use your key. It is saved inside the application files so that it doesn't prompts multiple times for the key and directly pulls the key from the gemini_api_key.txt file.
+
+- It is recommended to save it in C:/Users/your_username or D: or E: as Program files is a system folder which is highly protected by Windows and writeable files are not allowed to be saved here. 
 
 # 🧙‍♂️ Future Additions
 - Voice Integration
